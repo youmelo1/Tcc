@@ -22,18 +22,18 @@ public class Menu {
 	}
 	
 	public void cadastro() {
-		System.out.println("É necessário se cadastrar para poder usar o aplicativo");
+		System.out.println("Ã‰ necessÃ¡rio se cadastrar para poder usar o aplicativo");
 		System.out.println();
 		System.out.println("Nome?");
 		String nome = sc.next();
 		String codigo = String.valueOf(o.getPessoas().size()+1);
-		System.out.println("Qual sua altura? (em centímetros)");
+		System.out.println("Qual sua altura? (em centÃ­metros)");
 		double altura = sc.nextDouble();
 		System.out.println("Qual seu peso? (em kilogramas)");
 		double peso = sc.nextDouble();
 		System.out.println("Qual sua idade? ");
 		int idade = sc.nextInt();
-		System.out.println("Qual seu gênero? [F/M]");
+		System.out.println("Qual seu gÃªnero? [F/M]");
 		char sexo = sc.next().charAt(0);
 		Pessoa pessoa = new Pessoa(nome, codigo, altura, peso, idade, sexo);
 		o.inserirPessoa(pessoa);
@@ -51,13 +51,13 @@ public class Menu {
 				System.out.println("Nome?");
 				String nome = sc.next();
 				String codigo = String.valueOf(o.getPessoas().size()+1);
-				System.out.println("Altura? (em centímetros)");
+				System.out.println("Altura? (em centÃ­metros)");
 				double altura = sc.nextDouble();
 				System.out.println("Peso? (em kilogramas)");
 				double peso = sc.nextDouble();
 				System.out.println("Idade? ");
 				int idade = sc.nextInt();
-				System.out.println("Gênero? [F/M]");
+				System.out.println("GÃªnero? [F/M]");
 				char sexo = sc.next().charAt(0);
 				Pessoa p = new Pessoa(nome, codigo, altura, peso, idade, sexo);
 				o.inserirPessoa(p);
@@ -66,7 +66,7 @@ public class Menu {
 				break;
 				
 			case 2:
-				System.out.println("Escolha o código da pessoa que deseja calcular o IMC?");
+				System.out.println("Digite o cÃ³digo da pessoa que deseja calcular o IMC?");
 				o.info();
 				int pessoaIMC = sc.nextInt();
 				System.out.printf("%.2f",o.calcularImc(o.getPessoas().get(pessoaIMC-1)));
@@ -76,7 +76,7 @@ public class Menu {
 				break;
 				
 			case 3:
-				System.out.println("Escolha o código da pessoa que deseja calcular a taxa de gordura?");
+				System.out.println("Digite o cÃ³digo da pessoa que deseja calcular a taxa de gordura?");
 				o.info();
 				int pessoaTGC = sc.nextInt();
 				System.out.printf("%.2f",o.taxaGordura(o.getPessoas().get(pessoaTGC-1)));;
@@ -86,7 +86,7 @@ public class Menu {
 				break;
 				
 			case 4:
-				System.out.println("Escolha o código da pessoa que deseja calcular o peso ideal?");
+				System.out.println("Digite o cÃ³digo da pessoa que deseja calcular o peso ideal?");
 				o.info();
 				int pessoaPI = sc.nextInt();
 				System.out.printf("%.2f",o.pesoIdeal(o.getPessoas().get(pessoaPI-1)));
@@ -102,7 +102,7 @@ public class Menu {
 				break;
 				
 			default:
-				System.out.println("Essa não é uma opção disponível!");
+				System.out.println("Essa nÃ£o Ã© uma opÃ§Ã£o disponÃ­vel!");
 				opcoes();
 				esc = sc.nextInt();
 				break;
